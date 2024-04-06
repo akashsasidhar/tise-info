@@ -7654,7 +7654,7 @@ float:right;
 	position:absolute;
 	content:'';
 	left:0px;
-	top:-50px;
+	top:0px;
 	right:0px;
 	bottom:0px;
 	opacity:0.85;
@@ -8409,8 +8409,10 @@ float:right;
 .footer-style-three{
 	position:relative;
 	padding:110px 0px 0px;
-	background-color:var(--color-fiftythree);
-	background-image:url(images/background/pattern-12.png)
+	/* background-color:var(--color-fiftythree); */
+	background-color:var(--black-color);
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .footer-style-three .side-title{
