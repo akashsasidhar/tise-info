@@ -67,6 +67,9 @@
 	/* #fa4318 in decimal RGB */
 	--main-color: rgb(0,32,95);
 	--main-color-rgb:0,32,95;
+	/* Secondary color */
+	--secondary-color:rgb(197,2,53);
+	--secondary-color-rgb:197,2,53;
   
   /* #120600 in decimal RGB */
   --color-two: rgb(18,6,0);
@@ -1930,6 +1933,13 @@ img{
 	margin-bottom:var(--margin-bottom-20);
 }
 
+.sec-title .title2{
+	position: relative;
+    font-weight:700;
+	color:var(--secondary-color);
+	font-size:var(--font-20);
+	margin-bottom:var(--margin-bottom-20);
+}
 .sec-title .text{
 	margin-top:var(--margin-top-30);
 }
@@ -1946,7 +1956,7 @@ img{
 	bottom:0px;
 	height:3px;
 	width:60px;
-	background-color:var(--main-color);
+	background-color:var(--secondary-color);
 }
 
 .sec-title.light .text,
@@ -2108,13 +2118,13 @@ img{
 	display:block;
     font-weight:600;
 	font-size:var(--font-20);
-	color:var(--color-fourtytwo);
+	color:var(--secondary-color);
 	margin-bottom:var(--margin-bottom-20);
 }
 
 .sec-title-three .title span{
 	position: relative;
-	color:var(--color-fourty);
+	color:var(--secondary-color);
 }
 
 .sec-title-three .text{
@@ -2126,17 +2136,18 @@ img{
 .sec-title-three h2{
 	line-height:52px;
 	font-weight:800;
-	color:var(--color-fourty);
+	color:var(--main-color);
 	margin-top:var(--margin-top-15);
 }
 
-.sec-title-three.light .text,
-.sec-title-three.light h2{
+.sec-title-three.light .text{
 	color:var(--white-color);
 }
-
+.sec-title-three.light h2{
+	color:var(--gold-color);
+}
 .sec-title-three.light .title{
-	color:var(--white-color);
+	color:var(--secondary-color);
 	border-color:var(--white-color);
 }
 
