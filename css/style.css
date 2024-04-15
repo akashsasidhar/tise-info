@@ -1849,7 +1849,7 @@
 
 
 .main-slider-two .title span {
-	color: var(--color-twentyeight);
+	color: var(--secondary-color);
 }
 
 
@@ -1864,7 +1864,7 @@
 }
 
 .main-slider-two h1 span {
-	color: var(--color-twentyeight);
+	color: var(--secondary-color);
 }
 
 .main-slider-two h1 {
@@ -4830,11 +4830,25 @@
 	border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 
+.main-footer .footer-bottom-links {
+	position: relative;
+	padding: 22px 0px;
+	text-align: center;
+	/* border-top: 1px solid rgba(255, 255, 255, 0.10); */
+}
+
 .main-footer .footer-bottom .copyright {
 	position: relative;
 	font-size: var(--font-15);
 	color: var(--color-twentytwo);
 }
+
+.main-footer .footer-bottom-links .links {
+	position: relative;
+	font-size: var(--font-15);
+	color: var(--color-twentytwo);
+}
+
 
 .main-footer .footer-bottom .copyright a {
 	color: var(--main-color);
@@ -5097,7 +5111,7 @@
 
 .about-section-two {
 	position: relative;
-	padding: 130px 0px 70px;
+	padding: 130px 0px 20px;
 	background-position: right bottom;
 	background-repeat: no-repeat;
 }
@@ -5208,8 +5222,8 @@
 	-webkit-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	background-color: var(--color-twentyseven);
-	box-shadow: 0px 0px 15px rgba(var(--color-twentyseven-rgb), 0.5)
+	background-color: var(--color-twentyeight);
+	box-shadow: 0px 0px 15px rgba(var(--color-twentyeight-rgb), 0.5)
 }
 
 .feature-block-two .inner-box h6 {
@@ -5227,10 +5241,11 @@
 	margin-top: var(--margin-top-10);
 }
 
+/* 
 .feature-block-two:nth-child(2) .inner-box .icon {
 	background-color: var(--color-twentyeight);
 	box-shadow: 0px 0px 15px rgba(var(--color-twentyeight-rgb), 0.5)
-}
+} */
 
 /*** 
 
@@ -5250,7 +5265,7 @@
 	padding: 60px 35px;
 	border-radius: 5px;
 	overflow: hidden;
-	background-color: var(--color-twentyseven);
+	background-color: var(--main-color);
 }
 
 .cta-section-one h2 {
@@ -5346,8 +5361,8 @@
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	opacity: 0.80;
-	background-color: var(--color-twentynine);
+	/* opacity: 0.80; */
+	background-color: var(--color-fourty);
 }
 
 .service-block-three {
@@ -5724,7 +5739,7 @@
 	bottom: 0px;
 	right: 0px;
 	height: 520px;
-	background-color: var(--color-twentyfour);
+	background-color: var(--main-color);
 }
 
 .project-section-two .title-column {
@@ -6002,8 +6017,8 @@
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	opacity: 0.90;
-	background-color: var(--color-thirtytwo);
+	/* opacity: 0.90; */
+	background-color: var(--white-color);
 }
 
 .testimonial-section .counter-column {
@@ -8976,7 +8991,7 @@
 
 .service-section-five {
 	position: relative;
-	padding: 100px 0px 100px;
+	padding: 40px 0px 100px;
 }
 
 .service-section-six {
@@ -9425,6 +9440,7 @@
 .support-form .form-group input[type="password"],
 .support-form .form-group input[type="tel"],
 .support-form .form-group input[type="email"],
+.support-form .form-group input[type="number"],
 .support-form .form-group select {
 	position: relative;
 	display: block;
@@ -9448,6 +9464,7 @@
 .support-form .form-group input[type="password"]:focus,
 .support-form .form-group input[type="tel"]:focus,
 .support-form .form-group input[type="email"]:focus,
+.support-form .form-group input[type="number"]:focus,
 .support-form .form-group select:focus,
 .support-form .form-group textarea:focus {
 	border-color: var(--main-color);
@@ -9622,6 +9639,7 @@
 .faq-form .form-group input[type="password"],
 .faq-form .form-group input[type="tel"],
 .faq-form .form-group input[type="email"],
+.faq-form .form-group input[type="number"],
 .faq-form .form-group select {
 	position: relative;
 	display: block;
@@ -9646,6 +9664,7 @@
 .faq-form .form-group input[type="password"]:focus,
 .faq-form .form-group input[type="tel"]:focus,
 .faq-form .form-group input[type="email"]:focus,
+.faq-form .form-group input[type="number"]:focus,
 .faq-form .form-group select:focus,
 .faq-form .form-group textarea:focus {
 	border-color: var(--main-color);
@@ -11652,6 +11671,7 @@
 .comment-form .form-group input[type="password"],
 .comment-form .form-group input[type="tel"],
 .comment-form .form-group input[type="email"],
+.comment-form .form-group input[type="number"],
 .comment-form .form-group select {
 	position: relative;
 	display: block;
@@ -11675,6 +11695,7 @@
 .comment-form .form-group input[type="password"]:focus,
 .comment-form .form-group input[type="tel"]:focus,
 .comment-form .form-group input[type="email"]:focus,
+.comment-form .form-group input[type="number"]:focus,
 .comment-form .form-group select:focus,
 .comment-form .form-group textarea:focus {
 	border-color: var(--color-two);
@@ -11849,6 +11870,7 @@
 .contact-form .form-group input[type="password"],
 .contact-form .form-group input[type="tel"],
 .contact-form .form-group input[type="email"],
+.contact-form .form-group input[type="number"],
 .contact-form .form-group select {
 	position: relative;
 	display: block;
@@ -11872,9 +11894,22 @@
 .contact-form .form-group input[type="password"]:focus,
 .contact-form .form-group input[type="tel"]:focus,
 .contact-form .form-group input[type="email"]:focus,
+.contact-form .form-group input[type="number"]:focus,
 .contact-form .form-group select:focus,
 .contact-form .form-group textarea:focus {
 	border-color: var(--main-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
 }
 
 .contact-form .form-group textarea {
@@ -11954,4 +11989,37 @@
 .quadra-color {
 	color: var(--color-five) !important;
 
+}
+
+.mob-nav {
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.mob-nav .social-box {
+	position: relative;
+}
+
+.mob-nav .social-box span {
+	position: relative;
+
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.mob-nav .social-box span a {
+	padding: 2px;
+	position: relative;
+	color: var(--black-color);
+	font-size: var(--font-24);
+	-webkit-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.mob-nav .social-box span a:hover {
+	color: var(--main-color);
 }

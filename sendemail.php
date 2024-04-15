@@ -1,31 +1,47 @@
 <?php
 
-// Define some constants
-define( "RECIPIENT_NAME", "John Doe" );
-define( "RECIPIENT_EMAIL", "youremail@mail.com" );
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-// Read the form values
-$success = false;
-$userName = isset( $_POST['username'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['username'] ) : "";
-$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
-$senderPhone = isset( $_POST['phone'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone'] ) : "";
-$userSubject = isset( $_POST['subject'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject'] ) : "";
-$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
+// Load Composer's autoloader
+require 'vendor/autoload.php';
 
-// If all values exist, send the email
-if ( $userName && $senderEmail && $senderPhone && $userSubject && $message) {
-  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
-  $headers = "From: " . $userName . "";
-  $msgBody = " Name: ". $userName .  " Email: ". $senderEmail . " Phone: ". $senderPhone . " Subject: ". $userSubject . " Message: " . $message . "";
-  $success = mail( $recipient, $headers, $msgBody );
+// Create an instance of PHPMailer; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-  //Set Location After Successsfull Submission
-  header('Location: contact.html?message=Successfull');
+// Check if the form is submitted
+if(isset($_POST['username'])) {
+    $name = $_POST['username'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $subject = $_POST['subject'];
+    $msg = $_POST['message'];
+
+    try {
+        // Set SMTP settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'infoclubgnc2020@gmail.com'; // Your Gmail SMTP username
+        $mail->Password = 'tfsr oqlp ykzc gjvi'; // Your Gmail SMTP password
+        $mail->Port = 465;
+        $mail->SMTPSecure = 'ssl'; // Enable SSL encryption
+
+        // Set email details
+        $mail->setFrom($email, $name); // Sender's email and name
+        $mail->addAddress('charmingakash36@gmail.com', 'Admin'); // Recipient's email and name
+        $mail->Subject = $subject;
+        $mail->Body = $msg;
+
+        // Send email
+        if($mail->send()) {
+            echo 'Message has been sent';
+        } else {
+            echo 'Message could not be sent. Error: ' . $mail->ErrorInfo;
+        }
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Error: ' . $mail->ErrorInfo;
+    }
 }
-
-else{
-	//Set Location After Unsuccesssfull Submission
-  	header('Location: contact.html?message=Failed');	
-}
-
 ?>

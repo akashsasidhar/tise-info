@@ -323,8 +323,8 @@
 
 
 	/* Gold */
-	--gold-color: #ae945b;
-
+	--gold-color: rgb(174, 148, 91);
+	--gold-color-rgb: 174, 148, 91;
 	/* #ffffff in decimal RGB */
 	--white-color: rgb(255, 255, 255);
 	--white-color-rgb: 255, 255, 255;
@@ -1072,6 +1072,22 @@ img {
 	font-size: var(--font-12);
 	text-transform: uppercase;
 	background-color: var(--main-color);
+	font-family: var(--font-family-BeVietnam);
+}
+
+.btn-style-one-sm-2 {
+	position: relative;
+	line-height: 10px;
+	font-weight: 700;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 4px;
+	display: inline-grid;
+	padding: 12px 25px;
+	color: var(--white-color);
+	font-size: var(--font-12);
+	text-transform: uppercase;
+	background-color: var(--secondary-color);
 	font-family: var(--font-family-BeVietnam);
 }
 
@@ -2046,7 +2062,7 @@ img {
 	padding: 10px 100px 10px 25px;
 	font-size: var(--font-24);
 	display: inline-block;
-	color: var(--color-twentyseven);
+	color: var(--secondary-color);
 	margin-bottom: var(--margin-bottom-20);
 }
 
