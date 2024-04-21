@@ -202,7 +202,7 @@
 	font-weight: 400;
 	color: var(--color-five);
 	font-size: var(--font-15);
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 }
 
 .main-header .info-box strong {
