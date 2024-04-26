@@ -54,14 +54,14 @@ if(isset($_POST['username'])) {
         // Send email
         if($mail->send()) {
             // echo 'Message has been sent';
-            header("Location: index.html?msg=1");
+            header("Location: index.html?mail-status-successfully");
         } else {
             // echo 'Message could not be sent. Error: ' . $mail->ErrorInfo;
-            header("Location: index.html?msg=0");
+            header("Location: index.html?mail-status-failed");
         }
     } catch (Exception $e) {
         // echo 'Message could not be sent. Error: ' . $mail->ErrorInfo;
-        header("Location: index.html?msg=0");
+        header("Location: index.html?mail-status-failed");
       }
 }
 ?>
