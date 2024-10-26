@@ -1361,7 +1361,7 @@ img {
 	font-size: var(--font-16);
 	text-transform: capitalize;
 	display: inline-block;
-	background-color: var(--color-twentyeight);
+	background-color: var(--main-color);
 	font-family: var(--font-family-BeVietnam);
 }
 
@@ -1426,7 +1426,7 @@ img {
 }
 
 .btn-style-four:hover .btn-wrap .text-two {
-	color: var(--color-twentyeight);
+	color: var(--white-color);
 }
 
 .btn-style-four:hover {
